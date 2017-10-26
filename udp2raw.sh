@@ -70,7 +70,7 @@ install() {
 }
 unistall() {
 	if [[ -f /usr/local/bin/udp2raw ]]; then
-		udp2raw_pid=$(ps ux | pgrep "udp2raw")
+		udp2raw_pid=$(pgrep "udp2raw")
 		[ $udp2raw_pid ] && kill -9 $udp2raw_pid
 		rm -rf /usr/local/bin/udp2raw
 		echo -e " \n$green卸载完成...$none\n" && exit 1
