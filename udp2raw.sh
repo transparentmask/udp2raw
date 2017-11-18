@@ -85,9 +85,9 @@ error() {
 }
 while :; do
 	echo
-	echo "........... Udp2raw-tunnel 快速一键安装 by 233abc.com .........."
+	echo "........... Udp2raw-tunnel 快速一键安装 by 233blog.com .........."
 	echo
-	echo "帮助说明: https://233abc.com/post/22/"
+	echo "帮助说明: https://233blog.com/post/14/"
 	echo
 	echo " 1. 安装"
 	echo
