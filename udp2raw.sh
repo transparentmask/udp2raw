@@ -43,9 +43,9 @@ install() {
 		echo -e "$red 下载 Udp2raw-tunnel 失败！$none" && exit 1
 	fi
 	tar zxf /tmp/udp2raw_binaries.tar.gz -C /tmp/Udp2raw
-	cp -f /tmp/Udp2raw/$udp2raw_ver /usr/local/bin/udp2raw
-	chmod +x /usr/local/bin/udp2raw
-	if [[ -f /usr/local/bin/udp2raw ]]; then
+	cp -f /tmp/Udp2raw/$udp2raw_ver /usr/bin/udp2raw
+	chmod +x /usr/bin/udp2raw
+	if [[ -f /usr/bin/udp2raw ]]; then
 		clear
 		echo -e " 
 		$green Udp2raw-tunnel 安装完成...$none
@@ -69,10 +69,10 @@ install() {
 	rm -rf /tmp/udp2raw_binaries.tar.gz
 }
 unistall() {
-	if [[ -f /usr/local/bin/udp2raw ]]; then
+	if [[ -f /usr/bin/udp2raw ]]; then
 		udp2raw_pid=$(pgrep "udp2raw")
 		[ $udp2raw_pid ] && kill -9 $udp2raw_pid
-		rm -rf /usr/local/bin/udp2raw
+		rm -rf /usr/bin/udp2raw
 		echo -e " \n$green卸载完成...$none\n" && exit 1
 	else
 		echo -e " \n$red大胸弟...你貌似毛有安装 Udp2raw-tunnel ....卸载个鸡鸡哦...$none\n" && exit 1
