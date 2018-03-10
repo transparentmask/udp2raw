@@ -68,7 +68,7 @@ install() {
 	rm -rf /tmp/Udp2raw
 	rm -rf /tmp/udp2raw_binaries.tar.gz
 }
-unistall() {
+uninstall() {
 	if [[ -f /usr/bin/udp2raw ]]; then
 		udp2raw_pid=$(pgrep "udp2raw")
 		[ $udp2raw_pid ] && kill -9 $udp2raw_pid
@@ -100,7 +100,7 @@ while :; do
 		break
 		;;
 	2)
-		unistall
+		uninstall
 		break
 		;;
 	*)
